@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="WatchTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product_name" Type="varchar(max)" />
+          <Property Name="image" Type="varchar(max)" />
+          <Property Name="item_number" Type="varchar(max)" />
+          <Property Name="short_desc" Type="varchar(max)" />
+          <Property Name="full_desc" Type="varchar(max)" />
+          <Property Name="price" Type="varchar(max)" />
+          <Property Name="caliber" Type="varchar(max)" />
+          <Property Name="movement" Type="varchar(max)" />
+          <Property Name="chronograph" Type="varchar(max)" />
+          <Property Name="weight" Type="varchar(max)" />
+          <Property Name="height" Type="varchar(max)" />
+          <Property Name="diameter" Type="varchar(max)" />
+          <Property Name="thickness" Type="varchar(max)" />
+          <Property Name="jewel" Type="varchar(max)" />
+          <Property Name="case_material" Type="varchar(max)" />
+          <Property Name="strap_material" Type="varchar(max)" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="WatchTable" EntityType="Self.WatchTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="WatchTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="item_number" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="short_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="full_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="caliber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="movement" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="chronograph" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="height" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="diameter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="thickness" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="jewel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="case_material" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="strap_material" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="product_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="WatchTables" EntityType="Self.WatchTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities1">
+          <EntitySetMapping Name="WatchTables">
+            <EntityTypeMapping TypeName="Model.WatchTable">
+              <MappingFragment StoreEntitySet="WatchTable">
+                <ScalarProperty Name="product_name" ColumnName="product_name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="item_number" ColumnName="item_number" />
+                <ScalarProperty Name="short_desc" ColumnName="short_desc" />
+                <ScalarProperty Name="full_desc" ColumnName="full_desc" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="caliber" ColumnName="caliber" />
+                <ScalarProperty Name="movement" ColumnName="movement" />
+                <ScalarProperty Name="chronograph" ColumnName="chronograph" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="diameter" ColumnName="diameter" />
+                <ScalarProperty Name="thickness" ColumnName="thickness" />
+                <ScalarProperty Name="jewel" ColumnName="jewel" />
+                <ScalarProperty Name="case_material" ColumnName="case_material" />
+                <ScalarProperty Name="strap_material" ColumnName="strap_material" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

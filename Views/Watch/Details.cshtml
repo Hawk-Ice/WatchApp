@@ -1,0 +1,62 @@
+﻿@model WatchApp.Models.WatchTable
+
+@{
+    ViewBag.Title = "Details";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>Details</h2>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+
+            <img class="card-img-top mb-5 mb-md-0 col-md-6 table-bordered" src="@Url.Content(Model.image)" alt="...">
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">@Model.product_name</h1>
+                <div class="small mb-1"></div>
+                <div class="fs-5 mb-5">
+                    <span class="text-decoration-line-through text-danger">$@Model.price.00</span>
+                </div>
+                <p class="lead">@Model.full_desc</p>
+
+
+            <dl class="row">
+                <dt class="col-sm-3">Caliber</dt>
+                <dd class="col-sm-3">@Model.caliber</dd>
+
+                <dt class="col-sm-3">Movement</dt>
+                <dd class="col-sm-3">@Model.movement</dd>
+
+                <dt class="col-sm-3">Choronograph</dt>
+                <dd class="col-sm-3">@Model.chronograph</dd>
+
+                <dt class="col-sm-3 text-truncate">Weight</dt>
+                <dd class="col-sm-3">@Model.weight</dd>
+
+                <dt class="col-sm-3">Height</dt>
+                <dd class="col-sm-3">@Model.height</dd>
+
+                <dt class="col-sm-3">Diameter</dt>
+                <dd class="col-sm-3">@Model.diameter</dd>
+
+                <dt class="col-sm-3">Thickness</dt>
+                <dd class="col-sm-3">@Model.thickness</dd>
+
+                <dt class="col-sm-3 text-truncate">Jewel</dt>
+                <dd class="col-sm-3">@Model.jewel</dd>
+
+                <dt class="col-sm-3">Case Material</dt>
+                <dd class="col-sm-3">@Model.case_material</dd>
+
+                <dt class="col-sm-3">Strap Material</dt>
+                <dd class="col-sm-3">@Model.strap_material</dd>
+
+            </dl>
+                <button type="button" class="btn btn-outline-dark btn-lg">Buy</button>
+            </div>
+        </div>
+    </div>
+</section>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
